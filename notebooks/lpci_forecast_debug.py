@@ -127,7 +127,7 @@ class LCIForecaster:
             
             # Configure trial exactly like CPI notebook
             config = ec.TrialConfig.with_models(
-                models=["ridge_regressor", "lasso_regressor", "elastic_net_regressor"],
+                models=["xgboost_regressor"], #["ridge_regressor", "lasso_regressor", "elastic_net_regressor"],
                 task=ec.MlTask.regression,
                 budget_mode=BudgetMode.fast,
                 loss_funcs=["Root Mean Squared Error"],
